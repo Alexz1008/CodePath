@@ -31,11 +31,13 @@ Here's a walkthrough of implemented user stories:
 Part 1, shows basic functionality of the tip calculator, in that a numbed keyboard opens up, and that the tip and total both update when the bill or tip % changes.
 <img src='https://i.imgur.com/AjgMwSE.gif' title='Video Walkthrough Part 2' width='' alt='Video Walkthrough' />    
 Part 2, shows settings functionality with changes in the settings like default tip % and color scheme that persist through app close. Also shows that the bill field is automatically brought to focus upon opening the app.
+
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-The biggest challenge I had was having an older version of xcode. I assume this is why the majority of the example code given to me didn't work. I ended up having to do a lot of google searching to figure out why things like the UserDefaults weren't working, and then find out how they worked on the older version. I am certain that if I had the latest version (my mac is older, so it can't have it), I would've been able to implement more than I ended up doing, particularly animations.')'
+The biggest challenge I had was having an older version of xcode. I assume this is why the majority of the example code given to me didn't work. I ended up having to do a lot of google searching to figure out why things like the UserDefaults weren't working, and then find out how they worked on the older version. I am certain that if I had the latest version (my mac is older, so it can't have it), I would've been able to implement more than I ended up doing, particularly animations.
 
 ## License
 
