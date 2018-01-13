@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  tippy
 //
-//  Created by Youjuan Wang on 12/26/17.
+//  Created by Alexander Zhou on 12/26/17.
 //  Copyright © 2017 Alex Zhou. All rights reserved.
 //
 
@@ -14,11 +14,45 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var lineView: UIView!
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Animate the loading screen
+        self.view.alpha = 0
+        UIView.animateWithDuration(0.4) { () -> Void in
+            self.view.alpha = 1
+        }
+        
+        // Load default settings
+        let defaultTip = defaults.integerForKey("defaultTip")
+        tipControl.selectedSegmentIndex = defaultTip
+        billField.becomeFirstResponder()
+        
+    }
+    
+    override func viewWillAppear(animated:Bool) {
+        super.viewWillAppear(false)
+        
+        // Load default color scheme
+        if defaults.integerForKey("defaultColor") == 0 {
+            mainView.backgroundColor = .whiteColor()
+            tipLabel.textColor = .blackColor()
+            totalLabel.textColor = .blackColor()
+            tipControl.tintColor = .blueColor()
+            lineView.backgroundColor = .blackColor()
+        }
+        else if defaults.integerForKey("defaultColor") == 1 {
+            mainView.backgroundColor = .darkGrayColor()
+            tipLabel.textColor = .lightGrayColor()
+            totalLabel.textColor = .lightGrayColor()
+            tipControl.tintColor = .whiteColor()
+            lineView.backgroundColor = .lightGrayColor()
+        }
     }
 
     override func didReceiveMemoryWarning() {

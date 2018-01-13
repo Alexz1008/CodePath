@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  tippy
 //
-//  Created by Youjuan Wang on 12/26/17.
+//  Created by Alexander Zhou on 12/26/17.
 //  Copyright © 2017 Alex Zhou. All rights reserved.
 //
 
